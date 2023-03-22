@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { fetchWeatherData } from '../utils/weatherAPI';
 import { fetchLocationData } from '../utils/locationAPI';
+import '../styles/theme.css';
+import '../styles/styles.css';
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
