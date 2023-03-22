@@ -1,8 +1,8 @@
-import 'regenerator-runtime/runtime'; // Necessary for using async/await with Babel
-import config from '../config';
+import 'regenerator-runtime/runtime';
 
 const fetchLocationData = async (query) => {
-  const apiKey = config.openCageApiKey;
+  const apiKey = process.env.REACT_APP_OPENCAGE_API_KEY;
+  console.log("OpenCage API Key:", apiKey);
   const apiURL = `https://api.opencagedata.com/geocode/v1/json?q=${query}&key=${apiKey}`;
 
   try {

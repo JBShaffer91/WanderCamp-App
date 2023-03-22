@@ -1,10 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
+    clean: true,
   },
   module: {
     rules: [
@@ -28,7 +30,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    static: path.join(__dirname, 'public'),
     compress: true,
     port: 3000,
     open: true,

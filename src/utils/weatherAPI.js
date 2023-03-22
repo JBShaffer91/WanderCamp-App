@@ -1,8 +1,7 @@
-import 'regenerator-runtime/runtime'; // Necessary for using async/await with Babel
-import config from '../config';
+import 'regenerator-runtime/runtime';
 
 const fetchWeatherData = async (latitude, longitude) => {
-  const apiKey = config.openWeatherApiKey;
+  const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
   const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
 
   try {
@@ -25,5 +24,6 @@ const fetchWeatherData = async (latitude, longitude) => {
     console.error(error.message);
   }
 };
+
 
 export { fetchWeatherData };

@@ -10,6 +10,7 @@ const App = () => {
   const fetchUserWeatherData = async (query) => {
     try {
       const locationData = await fetchLocationData(query);
+      console.log('Location Data:', locationData);
       const { latitude, longitude } = locationData;
       const fetchedWeatherData = await fetchWeatherData(latitude, longitude);
       setWeatherData(fetchedWeatherData);

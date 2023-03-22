@@ -1,13 +1,13 @@
 body {
-  background-color: var(--olive-drab);
-  color: var(--desert-tan);
+  background-color: var(--desert-tan);
+  color: var(--olive-drab);
   font-family: Arial, sans-serif;
 }
 
 button {
   background-color: var(--burnt-sienna);
-  border: none;
-  color: white;
+  border: solid 2px;
+  color: var(--coyote-tan);
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
