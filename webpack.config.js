@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const DotenvWebpack = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -36,4 +36,9 @@ module.exports = {
     open: true,
     historyApiFallback: true,
   },
+  plugins: [
+    new DotenvWebpack({
+      path: '.env.local',
+    }),
+  ],
 };
