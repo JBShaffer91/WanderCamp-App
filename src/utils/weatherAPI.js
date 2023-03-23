@@ -21,7 +21,7 @@ const fetchWeatherData = async (latitude, longitude) => {
       throw new Error(`Error fetching weather data: ${data.message}`);
     }
   } catch (error) {
-    console.error(error.message);
+    console.error(error.message); 
   }
 };
 
